@@ -25,8 +25,7 @@ const Nav = () => {
                                <li><a href="listing.html">Catagories</a></li> 
                                
                             
-                               <li><a href="contact.html">Contact</a></li>
-                           </ul>
+                            </ul>
                        </nav>
                    </div>          
                     

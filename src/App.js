@@ -14,7 +14,7 @@ function App() {
   const [searchMovie, setSearchMovie] = useState("");
   const [totalResults, setTotalResults] = useState('0');
   const [currentMovie, setCurrentMovie] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState('1');
 
 
   // useEffect(() => {
