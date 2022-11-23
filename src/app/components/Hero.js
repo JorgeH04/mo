@@ -29,7 +29,9 @@ const Hero = ({
                               
                             </div>
                             <div class="search-form">
-                                <a href="#"><i class="ti-search"></i> Buscar</a>
+                                   <button onClick={fetchData}>
+                                       <a href="#"><i class="ti-search"></i> Buscar </a>
+                                   </button>
                             </div>	
                         </form>	
                     </div>

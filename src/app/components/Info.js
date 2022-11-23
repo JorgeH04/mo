@@ -1,31 +1,39 @@
 import React from 'react'
   
 
-const Info = () => {
+const Info = ({currentMovie, closeMovieInfo}) => {
     return (
         <>
 
-
         
-
-
 <section class="blog_area single-post-area section-padding">
      <div class="container">
         <div class="row">
+
+             <div className="row" onClick={closeMovieInfo} style={{cursor: "pointer", paddingTop: 50}}>
+                <i className="fas fa-arrow-left"></i>
+                <span>Go back</span>
+              </div>
+
            <div class="col-lg-8 posts-list">
               <div class="single-post">
                  <div class="feature-img">
-                    <img class="img-fluid" src="assets/img/blog/single_blog_1.png" alt=""/>
+                    {currentMovie.poster_path == null ?
+
+                    <img class="img-fluid" src={"https://s3-ap-southeast-1.amazonaws.com/upcode/static/default-image.jpg"} alt=""/>
+                      :
+                    <img class="img-fluid" src={`http://image.tmdb.org/t/p/w185${currentMovie.poster_path}`} alt=""/>
+
+                    }
                  </div>
                  <div class="blog_details">
-                    <h2 >Second divided from form fish beast made every of seas
-                       all gathered us saying he our
+                    <h2>
+                       {currentMovie.title}  
                     </h2>
                     
                     <p class="excert">
-                       MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                       should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                       fraction of the camp price. However, who has the willpower
+                    {currentMovie.overview}
+                    {currentMovie.vote_count}
                     </p>
                    
                    

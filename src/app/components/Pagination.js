@@ -12,7 +12,7 @@ const Pagination = ({nextPage, pages, currentPage}) => {
         pageLinks.push
             (
             <li 
-                  
+               className= {`waves-effect ${active} `} 
                 key={i} 
                 onClick={() =>  nextPage(i)} > <a href="#">{i}</a> 
             </li>
@@ -20,16 +20,8 @@ const Pagination = ({nextPage, pages, currentPage}) => {
 
     }
 
-
-
-
-   
-   
-
     return(
-
-
-    <div class="pagination-area text-center">
+      <div class="pagination-area text-center">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -39,15 +31,18 @@ const Pagination = ({nextPage, pages, currentPage}) => {
                             <ul class="pagination justify-content-start " id="myDIV">
                             
                                  { currentPage > 1 ? 
-                                  <li class="page-item"  onClick={()=> nextPage( currentPage - 1)}><a class="page-link" href="#">Prev</a></li> 
+                                  <li class="page-item"  
+                                  onClick={()=> nextPage( currentPage - 1)}>
+                                  <a class="page-link" className={`waves-effect `}  href="#">Prev</a></li> 
                                 : ''}
 
                                  { pageLinks }
 
-                                 {  currentPage <  pages + 1 
-                                     ? 
+                                 {  currentPage <  pages + 1 ? 
 
-                                 <li class="page-item" onClick={()=>nextPage(currentPage + 1)}> <a href="#">Next</a></li> 
+                                 <li class="page-item" className={`waves-effect `} 
+                                 onClick={()=>nextPage(currentPage + 1)}>
+                                  <a href="#">Next</a></li> 
                                      : ''
                                  }
 

@@ -4,11 +4,7 @@ import React from 'react'
 const Nav = () => {
     return (
         <>
-
-        
-
-    <header>
-   
+<header>
    <div class="header-area header-transparent">
        <div class="main-header header-sticky">
            <div class="container-fluid">
@@ -22,9 +18,7 @@ const Nav = () => {
                        <nav>
                            <ul id="navigation">
                                <li><a href="index.html">Home</a></li>
-                               <li><a href="listing.html">Catagories</a></li> 
-                               
-                            
+                               <li><a href="listing.html">Catagories</a></li>                           
                             </ul>
                        </nav>
                    </div>          
@@ -40,12 +34,8 @@ const Nav = () => {
            </div>
        </div>
    </div>
-    
 </header>
           
-
-
-
         </>
     )
 }
